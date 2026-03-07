@@ -1,0 +1,25 @@
+# Java / Maven
+Backend/**/target/
+*.class
+*.jar
+*.war
+
+# Node / Web
+Web/**/node_modules/
+Web/**/dist/
+Web/**/.vite/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+*.env
+*.env.local
