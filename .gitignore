@@ -23,3 +23,11 @@ Thumbs.db
 # Environment
 *.env
 *.env.local
+
+# Android / Mobile
+Mobile/**/build/
+Mobile/.gradle/
+Mobile/local.properties
+Mobile/**/.idea/
+Mobile/**/.cxx/
+Mobile/**/*.iml

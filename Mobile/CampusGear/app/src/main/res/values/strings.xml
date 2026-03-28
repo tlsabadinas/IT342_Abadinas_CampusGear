@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">CampusGear</string>
+    <string name="brand_campus">Campus</string>
+    <string name="brand_gear">Gear</string>
+
+    <!-- Login Screen -->
+    <string name="login_hero_subtitle">Welcome back. Sign in to manage your listings, rentals, and account.</string>
+    <string name="login_title">Sign In</string>
+    <string name="login_subtitle">Access your CampusGear account.</string>
+    <string name="btn_google_signin">Continue with Google</string>
+    <string name="divider_or_email">or sign in with email</string>
+    <string name="label_email">EMAIL ADDRESS</string>
+    <string name="label_password">PASSWORD</string>
+    <string name="hint_email">you@university.edu</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="btn_login">Sign In</string>
+    <string name="login_forgot_password">Forgot your password?</string>
+    <string name="login_no_account">New here?</string>
+    <string name="login_create_account">Create an account</string>
+    <string name="login_loading">Signing in…</string>
+
+    <!-- Register Screen -->
+    <string name="register_hero_subtitle">The campus marketplace where students rent equipment from each other — affordable, secure, and local.</string>
+    <string name="register_title">Create Account</string>
+    <string name="register_subtitle">Join your campus rental community today.</string>
+    <string name="btn_google_signup">Sign up with Google</string>
+    <string name="divider_or_register">or register with email</string>
+    <string name="label_username">USERNAME</string>
+    <string name="label_firstname">FIRST NAME</string>
+    <string name="label_lastname">LAST NAME</string>
+    <string name="label_email_address">EMAIL ADDRESS</string>
+    <string name="label_password_field">PASSWORD</string>
+    <string name="label_confirm_password">CONFIRM PASSWORD</string>
+    <string name="hint_firstname">e.g. Treasure Louise</string>
+    <string name="hint_lastname">e.g. Abadinas</string>
+    <string name="hint_password_min">Min. 8 characters</string>
+    <string name="hint_confirm_password">Re-enter password</string>
+    <string name="password_hint_text">Must include uppercase, number, and special character</string>
+    <string name="btn_register">Create Account</string>
+    <string name="register_has_account">Already have an account?</string>
+    <string name="register_sign_in">Sign In</string>
+    <string name="register_loading">Creating account…</string>
+
+    <!-- Home / Marketplace Screen -->
+    <string name="home_welcome">Welcome, %1$s!</string>
+    <string name="home_subtitle">You\'re logged in to CampusGear</string>
+    <string name="home_marketplace_title">Marketplace</string>
+    <string name="home_marketplace_desc">Browse available equipment from students on your campus.</string>
+    <string name="home_explore">Explore Equipment</string>
+    <string name="btn_logout">Sign Out</string>
+    <string name="logout_confirm_title">Sign Out</string>
+    <string name="logout_confirm_message">Are you sure you want to sign out?</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm">Confirm</string>
+
+    <!-- Validation Messages -->
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_password_short">Password must be at least 8 characters</string>
+    <string name="error_passwords_mismatch">Passwords do not match</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_unknown">Something went wrong. Please try again.</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_app_logo">CampusGear Logo</string>
+    <string name="cd_back_button">Go back</string>
+</resources>

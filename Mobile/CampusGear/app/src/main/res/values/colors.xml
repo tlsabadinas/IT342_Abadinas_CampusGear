@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors -->
+    <color name="primary">#800000</color>
+    <color name="primary_dark">#660000</color>
+    <color name="primary_light">#990000</color>
+    <color name="primary_variant">#800000</color>
+
+    <!-- Accent / Gold -->
+    <color name="accent">#EFAD1E</color>
+    <color name="accent_dark">#D49B0E</color>
+    <color name="accent_light">#FFF8E7</color>
+
+    <!-- Surface and Background -->
+    <color name="background">#FAFAF7</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Header Background Matches Maroon Theme -->
+    <color name="header_bg">#800000</color>
+    <color name="header_text">#FFFFFF</color>
+    <color name="header_subtitle">#FFCDD2</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_label">#374151</color>
+
+    <!-- Status -->
+    <color name="error">#DC2626</color>
+    <color name="error_light">#FEF2F2</color>
+    <color name="error_border">#FECACA</color>
+    <color name="success">#15803D</color>
+    <color name="success_light">#F0FDF4</color>
+    <color name="success_border">#BBF7D0</color>
+
+    <!-- Input -->
+    <color name="input_stroke">#D1D5DB</color>
+    <color name="input_stroke_focused">#800000</color>
+
+    <!-- Divider -->
+    <color name="divider">#E5E7EB</color>
+
+    <!-- Image placeholder bg -->
+    <color name="placeholder_bg">#F3F4F6</color>
+</resources>
