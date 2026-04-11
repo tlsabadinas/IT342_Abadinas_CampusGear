@@ -43,4 +43,35 @@ export const authApi = {
   logout: () => api.post('/auth/logout'),
 };
 
+export const productApi = {
+  getAll: () => api.get('/items'),
+  getById: (id) => api.get(`/items/${id}`),
+  search: (query) => api.get(`/items/search?query=${encodeURIComponent(query)}`),
+  getByCategory: (category) => api.get(`/items/category/${encodeURIComponent(category)}`),
+  getMyListings: () => api.get('/items/my'),
+  create: (data) => api.post('/items', data),
+  update: (id, data) => api.put(`/items/${id}`, data),
+  delete: (id) => api.delete(`/items/${id}`),
+};
+
+export const orderApi = {
+  create: (data) => api.post('/orders', data),
+  getMyRentals: () => api.get('/orders/my-rentals'),
+  getMyLendings: () => api.get('/orders/my-lendings'),
+  getById: (id) => api.get(`/orders/${id}`),
+  cancel: (id) => api.put(`/orders/${id}/cancel`),
+};
+
+export const userApi = {
+  getProfile: () => api.get('/users/profile'),
+  updateProfile: (data) => api.put('/users/profile', data),
+};
+
+export const cartApi = {
+  getItems: () => api.get('/cart'),
+  addItem: (data) => api.post('/cart/items', data),
+  removeItem: (itemId) => api.delete(`/cart/items/${itemId}`),
+  clear: () => api.delete('/cart'),
+};
+
 export default api;
