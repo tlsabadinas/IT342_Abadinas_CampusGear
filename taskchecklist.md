@@ -27,15 +27,15 @@
 - [x] `POST /api/auth/logout` — logout and invalidate refresh tokens
 - [x] Global exception handler (SDD error codes: AUTH-001, VALID-001, DB-002, etc.)
 
-### Core Business Features (Pending)
+### Core Business Features
 - [ ] Google OAuth integration
-- [ ] Equipment entity and CRUD operations (`/api/items`)
+- [x] Equipment entity and CRUD operations (`/api/items`)
 - [ ] Image upload via Cloudinary/ImgBB API
-- [ ] Equipment search and category filtering
-- [ ] Rental booking functionality (`/api/bookings`)
-- [ ] Sandbox payment gateway integration (`/api/payments/verify`)
+- [x] Equipment search and category filtering
+- [x] Rental booking functionality (`/api/orders`)
+- [x] Sandbox payment gateway integration (Sandbox mode)
 - [ ] SMTP email notifications (receipts, verification)
-- [ ] User profile management (`PUT /api/users/profile`)
+- [x] User profile management (`GET/PUT /api/users/profile`)
 
 ### Admin Features (Pending)
 - [ ] Admin view all bookings (`GET /api/admin/bookings`)
@@ -57,14 +57,14 @@
 - [x] Login page (split layout, Google login button, error handling)
 - [x] Marketplace dashboard (nav bar, search, category pills, equipment card grid)
 
-### Pages — Pending
-- [ ] Equipment detail page
-- [ ] Checkout / booking flow page
-- [ ] User profile page
-- [ ] My Listings page (user's own equipment)
-- [ ] Add/Edit equipment listing form
-- [ ] Transaction history page
-- [ ] Booking confirmation page
+### Pages — Implemented ✅
+- [x] Equipment detail page
+- [x] Checkout / booking flow page
+- [x] User profile page
+- [x] My Listings page (user's own equipment)
+- [x] Add equipment listing form
+- [x] Transaction history page
+- [x] Booking confirmation page
 - [ ] Admin dashboard (listing moderation, user management)
 - [ ] Responsive design polish for all screen sizes
 
