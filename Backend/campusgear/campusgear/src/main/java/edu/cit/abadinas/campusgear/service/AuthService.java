@@ -47,12 +47,10 @@ public class AuthService {
 
     @Transactional
     public AuthResponse register(RegisterRequest request) {
-        // Check for duplicate email
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new DuplicateEmailException("An account with this email already exists");
         }
 
-        // Create new user
         User user = User.builder()
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
@@ -65,12 +63,10 @@ public class AuthService {
 
         user = userRepository.save(user);
 
-        // Generate tokens
         UserDetails userDetails = userDetailsService.loadUserByUsername(user.getEmail());
         String accessToken = jwtService.generateAccessToken(userDetails);
         String refreshToken = jwtService.generateRefreshToken(userDetails);
 
-        // Save refresh token
         saveRefreshToken(user, refreshToken);
 
         return buildAuthResponse(user, accessToken, refreshToken);
@@ -95,7 +91,6 @@ public class AuthService {
         String accessToken = jwtService.generateAccessToken(userDetails);
         String refreshToken = jwtService.generateRefreshToken(userDetails);
 
-        // Save refresh token
         saveRefreshToken(user, refreshToken);
 
         return buildAuthResponse(user, accessToken, refreshToken);
@@ -144,7 +139,6 @@ public class AuthService {
                 .build();
     }
 
-    // Custom exceptions
     public static class DuplicateEmailException extends RuntimeException {
         public DuplicateEmailException(String message) {
             super(message);

@@ -2,6 +2,8 @@ package edu.cit.abadinas.campusgear.exception;
 
 import edu.cit.abadinas.campusgear.dto.ApiResponse;
 import edu.cit.abadinas.campusgear.service.AuthService;
+import edu.cit.abadinas.campusgear.service.ProductService;
+import edu.cit.abadinas.campusgear.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -48,6 +50,30 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ApiResponse<Void>> handleUserNotFound(UsernameNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(ApiResponse.error("DB-001", "Resource not found", ex.getMessage()));
+    }
+
+    @ExceptionHandler(ProductService.ResourceNotFoundException.class)
+    public ResponseEntity<ApiResponse<Void>> handleResourceNotFound(ProductService.ResourceNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(ApiResponse.error("DB-001", "Resource not found", ex.getMessage()));
+    }
+
+    @ExceptionHandler(ProductService.UnauthorizedAccessException.class)
+    public ResponseEntity<ApiResponse<Void>> handleUnauthorizedAccess(ProductService.UnauthorizedAccessException ex) {
+        return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                .body(ApiResponse.error("AUTH-003", "Insufficient permissions", ex.getMessage()));
+    }
+
+    @ExceptionHandler(OrderService.ProductUnavailableException.class)
+    public ResponseEntity<ApiResponse<Void>> handleProductUnavailable(OrderService.ProductUnavailableException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(ApiResponse.error("BUSINESS-001", "Equipment unavailable", ex.getMessage()));
+    }
+
+    @ExceptionHandler(OrderService.InvalidBookingException.class)
+    public ResponseEntity<ApiResponse<Void>> handleInvalidBooking(OrderService.InvalidBookingException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                .body(ApiResponse.error("BUSINESS-002", "Invalid booking", ex.getMessage()));
     }
 
     @ExceptionHandler(Exception.class)
