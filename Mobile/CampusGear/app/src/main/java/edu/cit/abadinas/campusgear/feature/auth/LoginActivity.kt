@@ -1,4 +1,4 @@
-package edu.cit.abadinas.campusgear.ui
+package edu.cit.abadinas.campusgear.feature.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.gson.Gson
 import edu.cit.abadinas.campusgear.R
-import edu.cit.abadinas.campusgear.api.ApiClient
+import edu.cit.abadinas.campusgear.feature.home.HomeActivity
+import edu.cit.abadinas.campusgear.shared.api.ApiClient
 import edu.cit.abadinas.campusgear.databinding.ActivityLoginBinding
-import edu.cit.abadinas.campusgear.model.ApiResponse
-import edu.cit.abadinas.campusgear.model.LoginRequest
-import edu.cit.abadinas.campusgear.util.SessionManager
+import edu.cit.abadinas.campusgear.shared.model.ApiResponse
+import edu.cit.abadinas.campusgear.shared.util.SessionManager
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
@@ -131,7 +131,7 @@ class LoginActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         binding.btnLogin.isEnabled = !isLoading
-        binding.btnLogin.text = if (isLoading) "Signing in\u2026" else "Sign In"
+        binding.btnLogin.text = if (isLoading) "Signing in…" else "Sign In"
     }
 
     private fun showError(message: String) {

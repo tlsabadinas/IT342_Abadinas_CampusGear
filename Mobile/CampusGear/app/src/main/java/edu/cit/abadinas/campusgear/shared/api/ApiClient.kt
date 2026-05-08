@@ -1,5 +1,6 @@
-package edu.cit.abadinas.campusgear.api
+package edu.cit.abadinas.campusgear.shared.api
 
+import edu.cit.abadinas.campusgear.feature.auth.AuthApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -9,13 +10,15 @@ import java.util.concurrent.TimeUnit
 /**
  * Singleton Retrofit client for communicating with the CampusGear backend API.
  *
+ * Shared across all feature slices — each slice gets its own service interface
+ * via the create() factory method.
+ *
  * Default base URL uses 10.0.2.2 which is the Android emulator alias
  * for the host machine's localhost. Change this to your machine's IP
  * address if testing on a physical device.
  */
 object ApiClient {
 
-    // For Android Emulator → host machine localhost
     private const val BASE_URL = "http://10.0.2.2:8080/api/"
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
@@ -35,8 +38,6 @@ object ApiClient {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    /**
-     * Provides the AuthApiService instance for authentication API calls.
-     */
+    /** Auth feature service */
     val authApiService: AuthApiService = retrofit.create(AuthApiService::class.java)
 }

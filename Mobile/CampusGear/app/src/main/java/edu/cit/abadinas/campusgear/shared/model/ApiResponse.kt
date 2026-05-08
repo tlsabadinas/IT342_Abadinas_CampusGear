@@ -1,10 +1,10 @@
-package edu.cit.abadinas.campusgear.model
+package edu.cit.abadinas.campusgear.shared.model
 
 import com.google.gson.annotations.SerializedName
 
 /**
  * Generic API response wrapper matching the backend's ApiResponse<T> structure.
- * All backend responses are wrapped in this format.
+ * Shared across all feature slices.
  */
 data class ApiResponse<T>(
     @SerializedName("success")
