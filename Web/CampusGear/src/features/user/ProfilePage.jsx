@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { userApi } from '../services/api';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { useAuth } from '../auth/AuthContext';
+import { userApi } from './userApi';
+import Navbar from '../../shared/components/Navbar';
+import Footer from '../../shared/components/Footer';
 
 const Profile = () => {
   const { user } = useAuth();

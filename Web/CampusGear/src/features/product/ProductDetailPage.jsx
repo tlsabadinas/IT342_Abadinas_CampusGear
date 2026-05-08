@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { productApi } from '../services/api';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { productApi } from './productApi';
+import Navbar from '../../shared/components/Navbar';
+import Footer from '../../shared/components/Footer';
 
 const SAMPLE_PRODUCTS = {
   1: { id: 1, name: 'Scientific Calculator', dailyRate: 5.00, listerName: 'Sarah M.', category: 'Electronics', description: 'Casio FX-991ES Plus scientific calculator. Perfect for calculus, statistics, and engineering courses.', condition: 'Good', location: 'Engineering Building, Room 101', status: 'AVAILABLE', imageUrl: '' },

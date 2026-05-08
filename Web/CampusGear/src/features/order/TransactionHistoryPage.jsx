@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { orderApi } from '../services/api';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { orderApi } from './orderApi';
+import Navbar from '../../shared/components/Navbar';
+import Footer from '../../shared/components/Footer';
 
 const TransactionHistory = () => {
   const [activeTab, setActiveTab] = useState('rentals');

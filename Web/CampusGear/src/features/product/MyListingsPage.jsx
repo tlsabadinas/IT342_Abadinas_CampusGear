@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { productApi } from '../services/api';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { productApi } from './productApi';
+import Navbar from '../../shared/components/Navbar';
+import Footer from '../../shared/components/Footer';
 
 const CATEGORIES = ['Electronics', 'Lab Equipment', 'Photography', 'Sports', 'Musical', 'Books'];
 const CONDITIONS = ['Excellent', 'Good', 'Fair', 'Needs Repair'];
